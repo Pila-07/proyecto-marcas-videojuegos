@@ -93,6 +93,12 @@ h2.seccion {
     color: #c0c0d0;
 }
 
+.caja ol, .caja ul {
+    color: #c0c0d0;
+    line-height: 2;
+    padding-left: 20px;
+}
+
 /* =========================================
    TARJETAS DE PLATAFORMAS (página principal)
    ========================================= */
