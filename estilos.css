@@ -94,9 +94,9 @@ h2.seccion {
 }
 
 /* =========================================
-   TARJETAS DE MARCAS (página principal)
+   TARJETAS DE PLATAFORMAS (página principal)
    ========================================= */
-.marcas {
+.plataformas {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -104,7 +104,7 @@ h2.seccion {
     margin-bottom: 50px;
 }
 
-.tarjeta-marca {
+.tarjeta-plataforma {
     background-color: #16213e;
     border: 1px solid #0f3460;
     border-radius: 8px;
@@ -114,17 +114,17 @@ h2.seccion {
     transition: border-color 0.3s;
 }
 
-.tarjeta-marca:hover {
+.tarjeta-plataforma:hover {
     border-color: #7b2fbe;
 }
 
-.tarjeta-marca h3 {
+.tarjeta-plataforma h3 {
     color: #ffffff;
     margin: 0 0 10px 0;
     font-size: 1.3em;
 }
 
-.tarjeta-marca p {
+.tarjeta-plataforma p {
     color: #a0a0b0;
     font-size: 0.9em;
     line-height: 1.5;
