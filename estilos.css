@@ -1,0 +1,385 @@
+/* =========================================
+   ESTILOS GENERALES - Proyecto Videojuegos
+   Lenguaje de Marcas - 1º DAM 2024/2025
+   ========================================= */
+
+/* Reseteo básico y fuente general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+/* =========================================
+   CABECERA
+   ========================================= */
+header {
+    background-color: #16213e;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #7b2fbe;
+}
+
+header h1 {
+    color: #7b2fbe;
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+}
+
+header p {
+    color: #a0a0b0;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+nav {
+    background-color: #0f3460;
+    padding: 12px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #7b2fbe;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Título de sección con línea */
+h2.seccion {
+    color: #7b2fbe;
+    border-bottom: 2px solid #7b2fbe;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   CAJAS DE TEXTO (bienvenida, intro, etc.)
+   ========================================= */
+.caja {
+    background-color: #16213e;
+    border-left: 5px solid #7b2fbe;
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+}
+
+.caja h2 {
+    color: #7b2fbe;
+    margin-top: 0;
+}
+
+.caja p {
+    line-height: 1.7;
+    color: #c0c0d0;
+}
+
+/* =========================================
+   TARJETAS DE MARCAS (página principal)
+   ========================================= */
+.marcas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tarjeta-marca {
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    padding: 25px 20px;
+    width: 260px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.tarjeta-marca:hover {
+    border-color: #7b2fbe;
+}
+
+.tarjeta-marca h3 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.tarjeta-marca p {
+    color: #a0a0b0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+/* =========================================
+   TARJETAS DE JUEGOS (páginas de marca)
+   ========================================= */
+.juegos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.tarjeta-juego {
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.tarjeta-juego:hover {
+    border-color: #7b2fbe;
+}
+
+/* Número del juego */
+.numero {
+    background-color: #7b2fbe;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Información del juego */
+.info-juego {
+    flex: 1;
+}
+
+.info-juego h3 {
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+
+/* Etiqueta de género */
+.genero {
+    display: inline-block;
+    background-color: #0f3460;
+    color: #a0c0ff;
+    font-size: 0.8em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.info-juego p {
+    color: #b0b0c0;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    font-size: 0.95em;
+}
+
+/* Valoración con estrellas */
+.valoracion {
+    color: #f0c040;
+    font-size: 1.1em;
+}
+
+.valoracion span {
+    color: #a0a0b0;
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+
+/* Datos rápidos del juego */
+.datos {
+    background-color: #0f3460;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    color: #a0c0ff;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* =========================================
+   TABLA RESUMEN
+   ========================================= */
+.resumen {
+    background-color: #16213e;
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+.resumen h2 {
+    color: #7b2fbe;
+    margin-top: 0;
+}
+
+.resumen table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resumen th {
+    background-color: #0f3460;
+    color: #a0c0ff;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.resumen td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #0f3460;
+    color: #c0c0d0;
+    font-size: 0.9em;
+}
+
+.resumen tr:last-child td {
+    border-bottom: none;
+}
+
+.resumen tr:hover td {
+    background-color: #1a2a50;
+}
+
+/* =========================================
+   LISTAS ORDENADAS (cómo usar, etc.)
+   ========================================= */
+.caja ol {
+    color: #c0c0d0;
+    line-height: 2;
+    padding-left: 20px;
+}
+
+/* =========================================
+   BOTONES Y ENLACES
+   ========================================= */
+.btn {
+    display: inline-block;
+    background-color: #7b2fbe;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #5a1f8a;
+}
+
+/* Botón centrado para volver atrás */
+.volver {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+footer {
+    background-color: #16213e;
+    text-align: center;
+    padding: 20px;
+    color: #606070;
+    font-size: 0.85em;
+    border-top: 2px solid #0f3460;
+}
+
+/* =========================================
+   TEMAS DE COLOR POR PÁGINA
+   ========================================= */
+
+/* Switch - Rojo */
+.tema-switch header { border-bottom-color: #e94560; }
+.tema-switch header h1 { color: #e94560; }
+.tema-switch nav a:hover { color: #e94560; }
+.tema-switch .caja { border-left-color: #e94560; }
+.tema-switch .caja h2 { color: #e94560; }
+.tema-switch h2.seccion { color: #e94560; border-bottom-color: #e94560; }
+.tema-switch .numero { background-color: #e94560; }
+.tema-switch .btn { background-color: #e94560; }
+.tema-switch .btn:hover { background-color: #c73652; }
+.tema-switch .tarjeta-juego:hover { border-color: #e94560; }
+.tema-switch .tarjeta-marca:hover { border-color: #e94560; }
+.tema-switch .resumen h2 { color: #e94560; }
+
+/* PlayStation - Azul */
+.tema-playstation header { border-bottom-color: #0070cc; }
+.tema-playstation header h1 { color: #0070cc; }
+.tema-playstation nav a:hover { color: #0070cc; }
+.tema-playstation .caja { border-left-color: #0070cc; }
+.tema-playstation .caja h2 { color: #0070cc; }
+.tema-playstation h2.seccion { color: #0070cc; border-bottom-color: #0070cc; }
+.tema-playstation .numero { background-color: #0070cc; }
+.tema-playstation .btn { background-color: #0070cc; }
+.tema-playstation .btn:hover { background-color: #005aa3; }
+.tema-playstation .tarjeta-juego:hover { border-color: #0070cc; }
+.tema-playstation .tarjeta-marca:hover { border-color: #0070cc; }
+.tema-playstation .resumen h2 { color: #0070cc; }
+
+/* Xbox - Verde */
+.tema-xbox header { border-bottom-color: #107c10; }
+.tema-xbox header h1 { color: #107c10; }
+.tema-xbox nav a:hover { color: #107c10; }
+.tema-xbox .caja { border-left-color: #107c10; }
+.tema-xbox .caja h2 { color: #107c10; }
+.tema-xbox h2.seccion { color: #107c10; border-bottom-color: #107c10; }
+.tema-xbox .numero { background-color: #107c10; }
+.tema-xbox .btn { background-color: #107c10; }
+.tema-xbox .btn:hover { background-color: #0a5a0a; }
+.tema-xbox .tarjeta-juego:hover { border-color: #107c10; }
+.tema-xbox .tarjeta-marca:hover { border-color: #107c10; }
+.tema-xbox .resumen h2 { color: #107c10; }
+
+/* PC - Gris */
+.tema-pc header { border-bottom-color: #888888; }
+.tema-pc header h1 { color: #888888; }
+.tema-pc nav a:hover { color: #888888; }
+.tema-pc .caja { border-left-color: #888888; }
+.tema-pc .caja h2 { color: #888888; }
+.tema-pc h2.seccion { color: #888888; border-bottom-color: #888888; }
+.tema-pc .numero { background-color: #888888; }
+.tema-pc .btn { background-color: #888888; }
+.tema-pc .btn:hover { background-color: #666666; }
+.tema-pc .tarjeta-juego:hover { border-color: #888888; }
+.tema-pc .tarjeta-marca:hover { border-color: #888888; }
+.tema-pc .resumen h2 { color: #888888; }
+
+/* Móvil - Blanco */
+.tema-movil header { border-bottom-color: #ffffff; }
+.tema-movil header h1 { color: #ffffff; }
+.tema-movil nav a:hover { color: #ffffff; }
+.tema-movil .caja { border-left-color: #ffffff; }
+.tema-movil .caja h2 { color: #ffffff; }
+.tema-movil h2.seccion { color: #ffffff; border-bottom-color: #ffffff; }
+.tema-movil .numero { background-color: #ffffff; color: #1a1a2e; }
+.tema-movil .btn { background-color: #ffffff; color: #1a1a2e; }
+.tema-movil .btn:hover { background-color: #cccccc; color: #1a1a2e; }
+.tema-movil .tarjeta-juego:hover { border-color: #ffffff; }
+.tema-movil .tarjeta-marca:hover { border-color: #ffffff; }
+.tema-movil .resumen h2 { color: #ffffff; }
