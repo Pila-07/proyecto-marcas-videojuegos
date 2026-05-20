@@ -19,11 +19,11 @@ header {
     background-color: #16213e;
     text-align: center;
     padding: 30px 20px;
-    border-bottom: 3px solid #7b2fbe;
+    border-bottom: 3px solid #e94560;
 }
 
 header h1 {
-    color: #7b2fbe;
+    color: #e94560;
     font-size: 2.5em;
     margin: 0 0 10px 0;
 }
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #7b2fbe;
+    color: #e94560;
 }
 
 /* =========================================
@@ -64,10 +64,10 @@ main {
     padding: 0 20px;
 }
 
-/* Título de sección con línea */
+/* Título de sección con línea roja */
 h2.seccion {
-    color: #7b2fbe;
-    border-bottom: 2px solid #7b2fbe;
+    color: #e94560;
+    border-bottom: 2px solid #e94560;
     padding-bottom: 8px;
     margin-bottom: 25px;
 }
@@ -77,14 +77,14 @@ h2.seccion {
    ========================================= */
 .caja {
     background-color: #16213e;
-    border-left: 5px solid #7b2fbe;
+    border-left: 5px solid #e94560;
     padding: 25px 30px;
     border-radius: 6px;
     margin-bottom: 40px;
 }
 
 .caja h2 {
-    color: #7b2fbe;
+    color: #e94560;
     margin-top: 0;
 }
 
@@ -115,7 +115,7 @@ h2.seccion {
 }
 
 .tarjeta-marca:hover {
-    border-color: #7b2fbe;
+    border-color: #e94560;
 }
 
 .tarjeta-marca h3 {
@@ -152,12 +152,12 @@ h2.seccion {
 }
 
 .tarjeta-juego:hover {
-    border-color: #7b2fbe;
+    border-color: #e94560;
 }
 
 /* Número del juego */
 .numero {
-    background-color: #7b2fbe;
+    background-color: #e94560;
     color: #ffffff;
     font-size: 1.5em;
     font-weight: bold;
@@ -233,7 +233,7 @@ h2.seccion {
 }
 
 .resumen h2 {
-    color: #7b2fbe;
+    color: #e94560;
     margin-top: 0;
 }
 
@@ -279,7 +279,7 @@ h2.seccion {
    ========================================= */
 .btn {
     display: inline-block;
-    background-color: #7b2fbe;
+    background-color: #e94560;
     color: #ffffff;
     text-decoration: none;
     padding: 8px 20px;
@@ -289,7 +289,7 @@ h2.seccion {
 }
 
 .btn:hover {
-    background-color: #5a1f8a;
+    background-color: #c73652;
 }
 
 /* Botón centrado para volver atrás */
@@ -309,77 +309,3 @@ footer {
     font-size: 0.85em;
     border-top: 2px solid #0f3460;
 }
-
-/* =========================================
-   TEMAS DE COLOR POR PÁGINA
-   ========================================= */
-
-/* Switch - Rojo */
-.tema-switch header { border-bottom-color: #e94560; }
-.tema-switch header h1 { color: #e94560; }
-.tema-switch nav a:hover { color: #e94560; }
-.tema-switch .caja { border-left-color: #e94560; }
-.tema-switch .caja h2 { color: #e94560; }
-.tema-switch h2.seccion { color: #e94560; border-bottom-color: #e94560; }
-.tema-switch .numero { background-color: #e94560; }
-.tema-switch .btn { background-color: #e94560; }
-.tema-switch .btn:hover { background-color: #c73652; }
-.tema-switch .tarjeta-juego:hover { border-color: #e94560; }
-.tema-switch .tarjeta-marca:hover { border-color: #e94560; }
-.tema-switch .resumen h2 { color: #e94560; }
-
-/* PlayStation - Azul */
-.tema-playstation header { border-bottom-color: #0070cc; }
-.tema-playstation header h1 { color: #0070cc; }
-.tema-playstation nav a:hover { color: #0070cc; }
-.tema-playstation .caja { border-left-color: #0070cc; }
-.tema-playstation .caja h2 { color: #0070cc; }
-.tema-playstation h2.seccion { color: #0070cc; border-bottom-color: #0070cc; }
-.tema-playstation .numero { background-color: #0070cc; }
-.tema-playstation .btn { background-color: #0070cc; }
-.tema-playstation .btn:hover { background-color: #005aa3; }
-.tema-playstation .tarjeta-juego:hover { border-color: #0070cc; }
-.tema-playstation .tarjeta-marca:hover { border-color: #0070cc; }
-.tema-playstation .resumen h2 { color: #0070cc; }
-
-/* Xbox - Verde */
-.tema-xbox header { border-bottom-color: #107c10; }
-.tema-xbox header h1 { color: #107c10; }
-.tema-xbox nav a:hover { color: #107c10; }
-.tema-xbox .caja { border-left-color: #107c10; }
-.tema-xbox .caja h2 { color: #107c10; }
-.tema-xbox h2.seccion { color: #107c10; border-bottom-color: #107c10; }
-.tema-xbox .numero { background-color: #107c10; }
-.tema-xbox .btn { background-color: #107c10; }
-.tema-xbox .btn:hover { background-color: #0a5a0a; }
-.tema-xbox .tarjeta-juego:hover { border-color: #107c10; }
-.tema-xbox .tarjeta-marca:hover { border-color: #107c10; }
-.tema-xbox .resumen h2 { color: #107c10; }
-
-/* PC - Gris */
-.tema-pc header { border-bottom-color: #888888; }
-.tema-pc header h1 { color: #888888; }
-.tema-pc nav a:hover { color: #888888; }
-.tema-pc .caja { border-left-color: #888888; }
-.tema-pc .caja h2 { color: #888888; }
-.tema-pc h2.seccion { color: #888888; border-bottom-color: #888888; }
-.tema-pc .numero { background-color: #888888; }
-.tema-pc .btn { background-color: #888888; }
-.tema-pc .btn:hover { background-color: #666666; }
-.tema-pc .tarjeta-juego:hover { border-color: #888888; }
-.tema-pc .tarjeta-marca:hover { border-color: #888888; }
-.tema-pc .resumen h2 { color: #888888; }
-
-/* Móvil - Blanco */
-.tema-movil header { border-bottom-color: #ffffff; }
-.tema-movil header h1 { color: #ffffff; }
-.tema-movil nav a:hover { color: #ffffff; }
-.tema-movil .caja { border-left-color: #ffffff; }
-.tema-movil .caja h2 { color: #ffffff; }
-.tema-movil h2.seccion { color: #ffffff; border-bottom-color: #ffffff; }
-.tema-movil .numero { background-color: #ffffff; color: #1a1a2e; }
-.tema-movil .btn { background-color: #ffffff; color: #1a1a2e; }
-.tema-movil .btn:hover { background-color: #cccccc; color: #1a1a2e; }
-.tema-movil .tarjeta-juego:hover { border-color: #ffffff; }
-.tema-movil .tarjeta-marca:hover { border-color: #ffffff; }
-.tema-movil .resumen h2 { color: #ffffff; }
