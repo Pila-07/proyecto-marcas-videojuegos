@@ -1,0 +1,508 @@
+<!-- Alejandro Pila, Lizer Tortosa, Daniel Blasco -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Recomendaciones de Videojuegos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos específicos del formulario */
+
+        .formulario {
+            background-color: #16213e;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo label {
+            display: block;
+            color: #a0c0ff;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .campo input,
+        .campo textarea,
+        .campo select {
+            width: 100%;
+            background-color: #0f3460;
+            border: 1px solid #1a4a8a;
+            border-radius: 4px;
+            padding: 8px 12px;
+            color: #e0e0e0;
+            font-size: 0.95em;
+            box-sizing: border-box;
+        }
+
+        .campo input:focus,
+        .campo textarea:focus,
+        .campo select:focus {
+            outline: none;
+            border-color: #7b2fbe;
+        }
+
+        /* Grupos de radio y checkbox */
+        .grupo-opciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 6px;
+        }
+
+        .grupo-opciones label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #c0c0d0;
+            font-size: 0.9em;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .grupo-opciones input {
+            width: auto;
+            cursor: pointer;
+        }
+
+        /* Separador de secciones del formulario */
+        .seccion-form {
+            border-left: 3px solid #7b2fbe;
+            padding-left: 15px;
+            margin: 25px 0 15px 0;
+            color: #ffffff;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        /* Botones del formulario */
+        .botones-form {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn-enviar {
+            background-color: #7b2fbe;
+            color: #ffffff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #5a1f8a;
+        }
+
+        .btn-borrar {
+            background-color: #0f3460;
+            color: #e0e0e0;
+            border: 1px solid #1a4a8a;
+            padding: 10px 30px;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-borrar:hover {
+            background-color: #1a4a8a;
+        }
+
+        /* Mensajes de error */
+        .error {
+            color: #e94560;
+            font-size: 0.82em;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .campo input.invalido,
+        .campo textarea.invalido,
+        .campo select.invalido {
+            border-color: #e94560;
+        }
+
+        /* Mensaje de éxito */
+        #mensaje-exito {
+            display: none;
+            background-color: #0a5a0a;
+            border: 1px solid #107c10;
+            color: #90ee90;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Botón cambiar tema */
+        #btn-tema {
+            display: inline-block;
+            background-color: #0f3460;
+            color: #e0e0e0;
+            border: 1px solid #1a4a8a;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        #btn-tema:hover {
+            background-color: #1a4a8a;
+        }
+
+        /* Tema claro */
+        body.tema-claro {
+            background-color: #f0f0f5;
+            color: #1a1a2e;
+        }
+
+        body.tema-claro header {
+            background-color: #dde0f0;
+        }
+
+        body.tema-claro nav {
+            background-color: #b0b8d8;
+        }
+
+        body.tema-claro nav a {
+            color: #1a1a2e;
+        }
+
+        body.tema-claro .formulario {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        body.tema-claro .campo input,
+        body.tema-claro .campo textarea,
+        body.tema-claro .campo select {
+            background-color: #f5f5ff;
+            border-color: #aaaacc;
+            color: #1a1a2e;
+        }
+
+        body.tema-claro .caja {
+            background-color: #ffffff;
+        }
+
+        body.tema-claro footer {
+            background-color: #dde0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>🎮 Recomendaciones de Videojuegos</h1>
+        <p>Únete a nuestra comunidad gamer</p>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="switch.html">Nintendo Switch</a>
+        <a href="playstation.html">PlayStation</a>
+        <a href="XBOX.html">Xbox</a>
+        <a href="PC.html">PC</a>
+        <a href="movil.html">Móvil</a>
+        <a href="formulario.html">Registro</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Botón para cambiar el tema (evento Javascript) -->
+        <button id="btn-tema" onclick="cambiarTema()">🌙 Cambiar a tema claro</button>
+
+        <div class="caja">
+            <h2>Formulario de registro</h2>
+            <p>Rellena el formulario para unirte a nuestra comunidad y recibir recomendaciones personalizadas.</p>
+        </div>
+
+        <!-- Mensaje de éxito -->
+        <div id="mensaje-exito">✅ ¡Registro completado con éxito! Bienvenido a la comunidad gamer.</div>
+
+        <!-- Formulario -->
+        <div class="formulario">
+            <form id="form-registro" action="#" method="post">
+
+                <!-- DATOS PERSONALES -->
+                <p class="seccion-form">Datos personales</p>
+
+                <!-- Nombre -->
+                <div class="campo">
+                    <label for="nombre">Nombre de usuario *</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="30" size="30"
+                        placeholder="Escribe tu nombre de usuario">
+                    <p class="error" id="error-nombre">El nombre de usuario es obligatorio.</p>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="campo">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" maxlength="20" size="30"
+                        placeholder="Mínimo 6 caracteres">
+                    <p class="error" id="error-password">La contraseña debe tener al menos 6 caracteres.</p>
+                </div>
+
+                <!-- Edad -->
+                <div class="campo">
+                    <label for="edad">Edad *</label>
+                    <input type="number" id="edad" name="edad" min="1" max="120" step="1"
+                        placeholder="Introduce tu edad">
+                    <p class="error" id="error-edad">Introduce una edad válida (entre 1 y 120).</p>
+                </div>
+
+                <!-- Descripción -->
+                <div class="campo">
+                    <label for="descripcion">Cuéntanos algo sobre ti</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"
+                        placeholder="¿Cuándo empezaste a jugar? ¿Cuál es tu género favorito?"></textarea>
+                </div>
+
+                <!-- PREFERENCIAS DE JUEGO -->
+                <p class="seccion-form">Preferencias de juego</p>
+
+                <!-- Plataforma favorita -->
+                <div class="campo">
+                    <label>Plataforma favorita *</label>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="plataforma" value="switch"> Nintendo Switch</label>
+                        <label><input type="radio" name="plataforma" value="playstation"> PlayStation</label>
+                        <label><input type="radio" name="plataforma" value="xbox"> Xbox</label>
+                        <label><input type="radio" name="plataforma" value="pc"> PC</label>
+                        <label><input type="radio" name="plataforma" value="movil"> Móvil</label>
+                    </div>
+                    <p class="error" id="error-plataforma">Selecciona una plataforma.</p>
+                </div>
+
+                <!-- Modo de juego favorito -->
+                <div class="campo">
+                    <label>Modo de juego favorito *</label>
+                    <div class="grupo-opciones">
+                        <label><input type="radio" name="modo" value="solo"> Solo</label>
+                        <label><input type="radio" name="modo" value="cooperativo"> Cooperativo</label>
+                        <label><input type="radio" name="modo" value="competitivo"> Competitivo</label>
+                        <label><input type="radio" name="modo" value="indiferente"> Me da igual</label>
+                    </div>
+                    <p class="error" id="error-modo">Selecciona un modo de juego.</p>
+                </div>
+
+                <!-- Géneros favoritos -->
+                <div class="campo">
+                    <label>Géneros que te gustan (elige los que quieras)</label>
+                    <div class="grupo-opciones">
+                        <label><input type="checkbox" name="generos" value="accion"> Acción</label>
+                        <label><input type="checkbox" name="generos" value="aventura"> Aventura</label>
+                        <label><input type="checkbox" name="generos" value="rol"> Rol (RPG)</label>
+                        <label><input type="checkbox" name="generos" value="estrategia"> Estrategia</label>
+                        <label><input type="checkbox" name="generos" value="deportes"> Deportes</label>
+                        <label><input type="checkbox" name="generos" value="terror"> Terror</label>
+                    </div>
+                </div>
+
+                <!-- Juego favorito -->
+                <div class="campo">
+                    <label for="juego-favorito">¿Cuál es tu juego favorito de todos los tiempos? *</label>
+                    <select id="juego-favorito" name="juego-favorito">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="zelda">The Legend of Zelda: Breath of the Wild</option>
+                        <option value="mario">Super Mario Odyssey</option>
+                        <option value="eldenring">Elden Ring</option>
+                        <option value="witcher">The Witcher 3: Wild Hunt</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <p class="error" id="error-juego">Selecciona un juego.</p>
+                </div>
+
+                <!-- DISPONIBILIDAD -->
+                <p class="seccion-form">Disponibilidad</p>
+
+                <!-- Fecha de nacimiento -->
+                <div class="campo">
+                    <label for="fecha-nacimiento">Fecha de nacimiento *</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                    <p class="error" id="error-fecha">La fecha de nacimiento es obligatoria.</p>
+                </div>
+
+                <!-- Mes en que más juegas -->
+                <div class="campo">
+                    <label for="mes-juego">Mes en el que más sueles jugar</label>
+                    <input type="month" id="mes-juego" name="mes-juego">
+                </div>
+
+                <!-- Hora habitual de juego -->
+                <div class="campo">
+                    <label for="hora-juego">Hora habitual a la que juegas</label>
+                    <input type="time" id="hora-juego" name="hora-juego">
+                </div>
+
+                <!-- Próxima sesión de juego -->
+                <div class="campo">
+                    <label for="proxima-sesion">Fecha y hora de tu próxima sesión de juego</label>
+                    <input type="datetime-local" id="proxima-sesion" name="proxima-sesion">
+                </div>
+
+                <!-- PERSONALIZACIÓN -->
+                <p class="seccion-form">Personalización</p>
+
+                <!-- Color favorito -->
+                <div class="campo">
+                    <label for="color-favorito">Color favorito para tu perfil</label>
+                    <input type="color" id="color-favorito" name="color-favorito" value="#7b2fbe">
+                </div>
+
+                <!-- Avatar -->
+                <div class="campo">
+                    <label for="avatar">Sube tu foto de perfil</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+
+                <!-- Botones -->
+                <div class="botones-form">
+                    <button type="button" class="btn-enviar" onclick="validarFormulario()">Registrarse</button>
+                    <button type="reset" class="btn-borrar">Borrar datos</button>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Proyecto de Lenguaje de Marcas &mdash; 1º DAM &mdash; Curso 2025/2026</p>
+        <p>Realizado por: Alejandro Pila, Lizer Tortosa y Daniel Blasco</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+
+        // =========================================
+        // EVENTO: CAMBIAR TEMA DE LA PÁGINA
+        // =========================================
+        function cambiarTema() {
+            var boton = document.getElementById('btn-tema');
+            var body = document.body;
+
+            if (body.classList.contains('tema-claro')) {
+                body.classList.remove('tema-claro');
+                boton.textContent = '🌙 Cambiar a tema claro';
+            } else {
+                body.classList.add('tema-claro');
+                boton.textContent = '☀️ Cambiar a tema oscuro';
+            }
+        }
+
+        // =========================================
+        // VALIDACIÓN DEL FORMULARIO
+        // =========================================
+        function validarFormulario() {
+
+            var valido = true;
+
+            // Limpiar errores anteriores
+            var errores = document.querySelectorAll('.error');
+            for (var i = 0; i < errores.length; i++) {
+                errores[i].style.display = 'none';
+            }
+            var campos = document.querySelectorAll('.invalido');
+            for (var i = 0; i < campos.length; i++) {
+                campos[i].classList.remove('invalido');
+            }
+
+            // Validar nombre
+            var nombre = document.getElementById('nombre');
+            if (nombre.value.trim() === '') {
+                document.getElementById('error-nombre').style.display = 'block';
+                nombre.classList.add('invalido');
+                valido = false;
+            }
+
+            // Validar contraseña
+            var password = document.getElementById('password');
+            if (password.value.length < 6) {
+                document.getElementById('error-password').style.display = 'block';
+                password.classList.add('invalido');
+                valido = false;
+            }
+
+            // Validar edad
+            var edad = document.getElementById('edad');
+            if (edad.value === '' || edad.value < 1 || edad.value > 120) {
+                document.getElementById('error-edad').style.display = 'block';
+                edad.classList.add('invalido');
+                valido = false;
+            }
+
+            // Validar plataforma (radio)
+            var plataformas = document.querySelectorAll('input[name="plataforma"]');
+            var plataformaSeleccionada = false;
+            for (var i = 0; i < plataformas.length; i++) {
+                if (plataformas[i].checked) {
+                    plataformaSeleccionada = true;
+                }
+            }
+            if (!plataformaSeleccionada) {
+                document.getElementById('error-plataforma').style.display = 'block';
+                valido = false;
+            }
+
+            // Validar modo de juego (radio)
+            var modos = document.querySelectorAll('input[name="modo"]');
+            var modoSeleccionado = false;
+            for (var i = 0; i < modos.length; i++) {
+                if (modos[i].checked) {
+                    modoSeleccionado = true;
+                }
+            }
+            if (!modoSeleccionado) {
+                document.getElementById('error-modo').style.display = 'block';
+                valido = false;
+            }
+
+            // Validar juego favorito (select)
+            var juego = document.getElementById('juego-favorito');
+            if (juego.value === '') {
+                document.getElementById('error-juego').style.display = 'block';
+                juego.classList.add('invalido');
+                valido = false;
+            }
+
+            // Validar fecha de nacimiento
+            var fecha = document.getElementById('fecha-nacimiento');
+            if (fecha.value === '') {
+                document.getElementById('error-fecha').style.display = 'block';
+                fecha.classList.add('invalido');
+                valido = false;
+            }
+
+            // Si todo es válido, mostrar mensaje de éxito
+            if (valido) {
+                document.getElementById('mensaje-exito').style.display = 'block';
+                document.getElementById('form-registro').reset();
+                window.scrollTo(0, 0);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
