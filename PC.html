@@ -22,6 +22,7 @@
 		<a href="XBOX.html">Xbox</a>
 		<a>PC</a>
 		<a href="movil.html">Movil</a>
+        <a href="formulario.html">Contacto</a>
 	</nav>
 
 	<main>
@@ -221,5 +222,29 @@
 	</main>
 
 </body>
+
+<script>
+    // Al cargar la página, comprobar si el tema estaba guardado
+    if (localStorage.getItem('tema') === 'claro') {
+        document.body.classList.add('tema-claro');
+        document.getElementById('btn-tema').textContent = '☀️ Cambiar a tema oscuro';
+    }
+
+    // Al pulsar el botón, guardar el tema elegido
+    function cambiarTema() {
+        var boton = document.getElementById('btn-tema');
+        var body = document.body;
+
+        if (body.classList.contains('tema-claro')) {
+            body.classList.remove('tema-claro');
+            boton.textContent = '🌙 Cambiar a tema claro';
+            localStorage.setItem('tema', 'oscuro');
+        } else {
+            body.classList.add('tema-claro');
+            boton.textContent = '☀️ Cambiar a tema oscuro';
+            localStorage.setItem('tema', 'claro');
+        }
+    }
+</script>
 
 </html>
